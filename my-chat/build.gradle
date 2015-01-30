@@ -1,0 +1,34 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.example.abrownapple.my_chat"
+        minSdkVersion 19
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile files('libs/quickblox-android-sdk-chat-2.1.jar')
+    compile files('libs/quickblox-android-sdk-content-2.1.jar')
+    compile files('libs/quickblox-android-sdk-core-2.1.jar')
+    compile files('libs/quickblox-android-sdk-customobjects-2.1.jar')
+    compile files('libs/quickblox-android-sdk-location-2.1.jar')
+    compile files('libs/quickblox-android-sdk-messages-2.1.jar')
+    compile files('libs/quickblox-android-sdk-ratings-2.1.jar')
+    compile files('libs/quickblox-android-sdk-videochat-2.1.jar')
+    compile files('libs/quickblox-android-sdk-videochat-webrtc-2.1.jar')
+}
